@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="author" content="Bart Arentze">
+		<meta name="author" content="Luuk Vogel">
 		<title>Manege</title>
 		<link rel="icon" href="<?= URL ?>img/icon.png" type="image/gif">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
@@ -17,30 +17,23 @@
 	</head>
 <body>
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-4">
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><small>"</small>App_Name<small>"</small></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="<?= URL ?>home/index">Index <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?= URL ?>home/index">Reserveringen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= URL ?>home/create">Create</a>
+                <a class="nav-link" href="<?= URL ?>race/index">Rassen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= URL ?>home/edit/1">Edit</a>
-			</li>
-			<li class="nav-item">
-                <a class="nav-link" href="<?= URL ?>home/delete/1">Delete</a>
+                <a class="nav-link" href="<?= URL ?>horse/index">Paarden</a>
             </li>
-            </ul>
-            <span class="navbar-text">
-            Welkom terug, <span class="font-weight-bold">Bart Arentze</span>!
-            </span>
-        </div>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= URL ?>customer/index">Klanten</a>
+            </li>
+        </ul>
     </div>
-</nav> -->
+</nav>
+

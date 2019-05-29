@@ -22,9 +22,11 @@
             <td><?= $customer['stad'] ?></td>
             <td><?= $customer['telefoon'] ?></td>
             <td><?= $customer['email'] ?></td>
+            <td><a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a></td>
+            <td><a href="<?= URL ?>customer/deleteCustomer/<?php echo $customer['id']; ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
         <?php } ?>
     </tbody>
 </table>
 
-<p class="lead text-center"><a href="<?= URL ?>customer/create">+ Klant toevoegen</a></p>
+<p class="lead text-center"><a href="<?= URL ?>customer/createNewCustomer">+ Klant toevoegen</a></p>
