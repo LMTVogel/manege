@@ -22,8 +22,8 @@
             <td><?= $customer['stad'] ?></td>
             <td><?= $customer['telefoon'] ?></td>
             <td><?= $customer['email'] ?></td>
-            <td><a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a></td>
-            <td><a href="<?= URL ?>customer/deleteCustomer/<?php echo $customer['id']; ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+            <td><a href="<?= URL ?>customer/edit/<?php echo $customer['id']?>" class="btn btn-warning"><i class="fas fa-edit"></i></a></td>
+            <td><a href="<?= URL ?>customer/delete/<?php echo $customer['id']; ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
         <?php } ?>
     </tbody>

@@ -69,3 +69,54 @@ function store($naam, $adres, $postcode, $stad, $telefoon, $email){
         echo "Connection failed: " . $e->getMessage();
     }
  }
+
+ function deleteCustomer($customer){
+    try {
+       // Open de verbinding met de database
+       $conn=openDatabaseConnection();
+
+       $id = $_POST['id'];
+
+       $sql = 'DELETE FROM `customers` WHERE id = :id';
+       $query = $conn->prepare($sql);
+       $query->bindParam(":id", $id);
+       $query->execute();
+      }
+   // Vang de foutmelding af
+   catch(PDOException $e){
+       // Zet de foutmelding op het scherm
+       echo "Connection failed: " . $e->getMessage();
+   }
+ }
+
+ function updateCustomer($naam, $adres, $postcode, $stad, $telefoon, $email, $id){
+    // Maak hier de code om een medewerker te bewerken
+  try {
+       // Open de verbinding met de database
+       $conn=openDatabaseConnection();
+
+       $sql = 'SELECT * from `customers` WHERE id = :id';
+       $query = $conn->prepare($sql);
+       $query->bindParam(":id", $id);
+       $query->execute();
+
+       $result = $query->fetch();
+
+       $sql = "UPDATE `customers` SET naam = :naam, adres = :adres, postcode = :postcode, stad = :stad, telefoon = :telefoon, email = :email where id = :id";
+       $query = $conn->prepare($sql);
+
+        $query->bindParam("naam", $_POST['naam']);
+        $query->bindParam("adres", $_POST['adres']);
+        $query->bindParam("postcode", $_POST['postcode']);
+        $query->bindParam("stad", $_POST['stad']);
+        $query->bindParam("telefoon", $_POST['telefoon']);
+        $query->bindParam("email", $_POST['email']);
+        $query->bindParam(":id", $id);
+        $query->execute();
+      }
+   // Vang de foutmelding af
+   catch(PDOException $e){
+       // Zet de foutmelding op het scherm
+       echo "Connection failed: " . $e->getMessage();
+   }
+}
